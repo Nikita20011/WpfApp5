@@ -47,17 +47,15 @@ namespace WpfApp5.PageMain
                 if (password.Password.Length > 0) // проверяем введён ли пароль         
                 {             // ищем в базе данных пользователя с такими данными         
                     DataTable dt_user = Select("SELECT * FROM [dbo].[Student] WHERE [Name] = '" + logintb.Text + "' AND [password] = '" + password.Password + "'");
+                    DataTable dt_use = Select("SELECT * FROM [dbo].[Teacher] WHERE [Name] = '" + logintb.Text + "' AND [password] = '" + password.Password + "'");
                     if (dt_user.Rows.Count > 0) // если такая запись существует       
                     {
                         //MessageBox.Show("Пользователь авторизовался"); // говорим, что авторизовался 
 
                         MW.FrameBody.NavigationService.Navigate(new Enterbody());
-                        MW.FrameMenu.NavigationService.Navigate(new FastMenu());
-
-                        
-                    }
-                    DataTable dt_use = Select("SELECT * FROM [dbo].[Teacher] WHERE [Name] = '" + logintb.Text + "' AND [password] = '" + password.Password + "'");
-                    if (dt_use.Rows.Count > 0)
+                        MW.FrameMenu.NavigationService.Navigate(new FastMenu());                       
+                    }                   
+                    else if (dt_use.Rows.Count > 0)
                     {
                         MW.FrameBody.NavigationService.Navigate(new Enterbody());
                         MW.FrameMenu.NavigationService.Navigate(new FastMenuPrepod());

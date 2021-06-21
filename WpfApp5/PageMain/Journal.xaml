@@ -12,8 +12,8 @@
         <StackPanel Orientation="Vertical"  Width="550" HorizontalAlignment="Center" VerticalAlignment="Center">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                 <TextBlock x:Name="TextBlockname"  HorizontalAlignment="left" Margin="0,10,10,10" Text="Название группы:" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
-                <ComboBox x:Name="CmdNamegroup2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10" Width="120" Height="24" FontSize="14"/>
-                <Button x:Name="BtnSearch" Content="Поиск" HorizontalAlignment="left" VerticalAlignment="Top" Margin="10" Height="24" Width="100" FontSize="14" Style="{StaticResource ButtonStyle}" Click="BtnSearh_Click"/>
+                <ComboBox ItemsSource="{Binding}" DisplayMemberPath="Name" x:Name="CmdNamegroup2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10" Width="120" Height="24" FontSize="14" />
+                <Button x:Name="BtnSearch"  Content="Поиск" HorizontalAlignment="left" VerticalAlignment="Top" Margin="10" Height="24" Width="100" FontSize="14" Style="{StaticResource ButtonStyle}" Click="BtnSearh_Click"/>
             </StackPanel>
             
             

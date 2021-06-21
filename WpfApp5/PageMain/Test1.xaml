@@ -76,7 +76,8 @@
                 </StackPanel>
 
                 <Button  Content="Получить результат" Width="200" Height="24" FontSize="14" HorizontalAlignment="Center" Margin="10" Style="{StaticResource ButtonStyle}" VerticalAlignment="Center" Click="Button_Click_5"/>
-                
+                <ComboBox x:Name="CmbSt1" />
+                <ComboBox x:Name="CmbGr1" />
             </StackPanel>
         </ScrollViewer>
     </Grid>

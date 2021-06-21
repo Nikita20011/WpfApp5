@@ -12,6 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfApp5.Class;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace WpfApp5.PageMain
 {
@@ -139,6 +142,8 @@ namespace WpfApp5.PageMain
             MessageBox.Show($"Ваша оценка - {c}, количество баллов {b}");
             MW.FrameBody.NavigationService.Navigate(new Enterbody());
             MW.FrameMenu.NavigationService.Navigate(new FastMenuPrepod());
+            
         }
-    }
+
+}
 }

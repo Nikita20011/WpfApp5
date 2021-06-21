@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="Хранилище BDBModel" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="Хранилище BDBModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Group">
           <Key>
             <PropertyRef Name="ID" />
@@ -19,6 +19,7 @@
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="ID_students" Type="int" Nullable="false" />
           <Property Name="Evaluation" Type="int" Nullable="false" />
+          <Property Name="Test" Type="int" Nullable="false" />
           <Property Name="ID_group" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Student">
@@ -60,7 +61,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Journal_Student">
+        <Association Name="FK_Journal_Student1">
           <End Role="Student" Type="Self.Student" Multiplicity="1" />
           <End Role="Journal" Type="Self.Journal" Multiplicity="*" />
           <ReferentialConstraint>
@@ -94,7 +95,7 @@
             <End Role="Group" EntitySet="Group" />
             <End Role="Journal" EntitySet="Journal" />
           </AssociationSet>
-          <AssociationSet Name="FK_Journal_Student" Association="Self.FK_Journal_Student">
+          <AssociationSet Name="FK_Journal_Student1" Association="Self.FK_Journal_Student1">
             <End Role="Student" EntitySet="Student" />
             <End Role="Journal" EntitySet="Journal" />
           </AssociationSet>
@@ -103,7 +104,8 @@
             <End Role="Student" EntitySet="Student" />
           </AssociationSet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="BDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -113,8 +115,8 @@
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Journals" Relationship="Self.FK_Journal_Group" FromRole="Group" ToRole="Journal" />
           <NavigationProperty Name="Students" Relationship="Self.FK_Student_Group" FromRole="Group" ToRole="Student" />
-          <NavigationProperty Name="Journals" Relationship="BDBModel.FK_Journal_Group" FromRole="Group" ToRole="Journal" />
         </EntityType>
         <EntityType Name="Journal">
           <Key>
@@ -123,9 +125,10 @@
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="ID_students" Type="Int32" Nullable="false" />
           <Property Name="Evaluation" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Student" Relationship="Self.FK_Journal_Student" FromRole="Journal" ToRole="Student" />
+          <Property Name="Test" Type="Int32" Nullable="false" />
           <Property Name="ID_group" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Group" Relationship="BDBModel.FK_Journal_Group" FromRole="Journal" ToRole="Group" />
+          <NavigationProperty Name="Group" Relationship="Self.FK_Journal_Group" FromRole="Journal" ToRole="Group" />
+          <NavigationProperty Name="Student" Relationship="Self.FK_Journal_Student1" FromRole="Journal" ToRole="Student" />
         </EntityType>
         <EntityType Name="Student">
           <Key>
@@ -136,7 +139,7 @@
           <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="ID_group" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Group" Relationship="Self.FK_Student_Group" FromRole="Student" ToRole="Group" />
-          <NavigationProperty Name="Journals" Relationship="Self.FK_Journal_Student" FromRole="Student" ToRole="Journal" />
+          <NavigationProperty Name="Journals" Relationship="Self.FK_Journal_Student1" FromRole="Student" ToRole="Journal" />
         </EntityType>
         <EntityType Name="sysdiagram">
           <Key>
@@ -156,6 +159,18 @@
           <Property Name="Name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
         </EntityType>
+        <Association Name="FK_Journal_Group">
+          <End Role="Group" Type="Self.Group" Multiplicity="1" />
+          <End Role="Journal" Type="Self.Journal" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Group">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Journal">
+              <PropertyRef Name="ID_group" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Student_Group">
           <End Role="Group" Type="Self.Group" Multiplicity="1" />
           <End Role="Student" Type="Self.Student" Multiplicity="*" />
@@ -168,7 +183,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Journal_Student">
+        <Association Name="FK_Journal_Student1">
           <End Role="Student" Type="Self.Student" Multiplicity="1" />
           <End Role="Journal" Type="Self.Journal" Multiplicity="*" />
           <ReferentialConstraint>
@@ -186,31 +201,19 @@
           <EntitySet Name="Students" EntityType="Self.Student" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
           <EntitySet Name="Teachers" EntityType="Self.Teacher" />
+          <AssociationSet Name="FK_Journal_Group" Association="Self.FK_Journal_Group">
+            <End Role="Group" EntitySet="Groups" />
+            <End Role="Journal" EntitySet="Journals" />
+          </AssociationSet>
           <AssociationSet Name="FK_Student_Group" Association="Self.FK_Student_Group">
             <End Role="Group" EntitySet="Groups" />
             <End Role="Student" EntitySet="Students" />
           </AssociationSet>
-          <AssociationSet Name="FK_Journal_Student" Association="Self.FK_Journal_Student">
+          <AssociationSet Name="FK_Journal_Student1" Association="Self.FK_Journal_Student1">
             <End Role="Student" EntitySet="Students" />
             <End Role="Journal" EntitySet="Journals" />
           </AssociationSet>
-          <AssociationSet Name="FK_Journal_Group" Association="BDBModel.FK_Journal_Group">
-            <End Role="Group" EntitySet="Groups" />
-            <End Role="Journal" EntitySet="Journals" />
-          </AssociationSet>
         </EntityContainer>
-        <Association Name="FK_Journal_Group">
-          <End Type="BDBModel.Group" Role="Group" Multiplicity="1" />
-          <End Type="BDBModel.Journal" Role="Journal" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Group">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="Journal">
-              <PropertyRef Name="ID_group" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -228,10 +231,11 @@
           <EntitySetMapping Name="Journals">
             <EntityTypeMapping TypeName="BDBModel.Journal">
               <MappingFragment StoreEntitySet="Journal">
-                <ScalarProperty Name="ID_group" ColumnName="ID_group" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="ID_students" ColumnName="ID_students" />
                 <ScalarProperty Name="Evaluation" ColumnName="Evaluation" />
+                <ScalarProperty Name="Test" ColumnName="Test" />
+                <ScalarProperty Name="ID_group" ColumnName="ID_group" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -281,7 +285,7 @@
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
         <DesignerProperty Name="EnablePluralization" Value="true" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
-        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
       </DesignerInfoPropertySet>
     </Options>

@@ -27,7 +27,12 @@ namespace WpfApp5.PageMain
         public Test1()
         {
             InitializeComponent();
-            
+            //CmbGr1.SelectedValuePath = "ID";
+            //CmbGr1.DisplayMemberPath = "Name";
+            //CmbGr1.ItemsSource = ClassConnect.Ent.Groups.ToList();
+            //CmbSt1.SelectedValuePath = "ID";
+            //CmbSt1.DisplayMemberPath = "Name";
+            //CmbSt1.ItemsSource = ClassConnect.Ent.Students.ToList();
 
 
 
@@ -132,14 +137,39 @@ namespace WpfApp5.PageMain
             if (b == 3 || b == 2) c = 3;
             if (b == 1 || b == 0) c = 2;
             MessageBox.Show($"Ваша оценка - {c}, количество баллов {b}");
+            string mes = "";
+            if (string.IsNullOrWhiteSpace(CmbGr1.Text))
+                mes += "Выберете название группы\n";
+            if (string.IsNullOrWhiteSpace(CmbSt1.Text))
+                mes += "Введите ФИО\n";
 
+            if (mes != "")
+            {
+                MessageBox.Show(mes);
+                mes = "";
+                return;
+            }
+            //Journal journal = new Journal()
+            {
+                //Evalution = c,
+                //Student = CmbSt1.SelectedItem as Student,
+                //Group = CmbGr1.SelectedItem as Group,
+                //Test = 1
+
+            };
+            //private void CmbGr1_SelectionChanged(object sender, SelectionChangedEventArgs e)
+            {
+                //int SelectedStudent = Convert.ToInt32(CmbGr1.SelectedValue);
+                //CmbSt1.ItemsSource = ClassConnect.Ent.Students.Where(x => x.ID_group == SelectedStudent).ToList();
+            }
 
 
 
             MW.FrameBody.NavigationService.Navigate(new Enterbody());
             MW.FrameMenu.NavigationService.Navigate(new FastMenu());
-
             
+            
+
         }
     }
 }

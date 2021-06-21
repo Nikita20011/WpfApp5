@@ -1,0 +1,28 @@
+﻿<Page x:Class="WpfApp5.PageMain.Slovo"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp5.PageMain"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Slovo">
+
+    <Grid>
+        <ScrollViewer>
+            <TextBlock FontSize="18" Margin="10" TextWrapping="WrapWithOverflow">
+                СЛОВООБРАЗОВАТЕЛЬНЫЕ НОРМЫ
+                Словообразовательные нормы во многом связаны с лексическими, грамматическими,
+                стилистическими нормами н определяют правильность письменной и устной речи. Неточность в
+                образовании слова приводит к неясности его значения и не может быть не исправлена в речи, как и
+                ошибка в ударении или произношении.
+                <LineBreak/>
+                Задание:Спишите, исправьте речевые ошибки
+                В распоряжение сотрудников лаборатории была поставлена вся документация. Звери ведут более
+                скрытный образ жизни. Многие вузы и средние учебные заведения готовили специалистов, не
+                востребуемых на рынке труда. В автобус вошёл здоровенный мужчина. У маленькой Даши на голове
+                был завязан красивенный бант.
+            </TextBlock>
+        </ScrollViewer>
+    </Grid>
+</Page>

@@ -22,7 +22,7 @@ namespace WpfApp5.PageMain
     public partial class FastMenuPrepod : Page
     {
 
-        MainWindow MW = Application.Current.Windows.OfType<MainWindow>().FirstOrDefault();
+        //MainWindow MW = Application.Current.Windows.OfType<MainWindow>().FirstOrDefault();
 
         public FastMenuPrepod()
         {
@@ -31,17 +31,33 @@ namespace WpfApp5.PageMain
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            MW.FrameBody.NavigationService.Navigate(new Journal());
+            ClassFrame.FrameBody.Navigate(new Journal());
+
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            MW.FrameBody.NavigationService.Navigate(new Test1Prepod());
+            ClassFrame.FrameBody.Navigate(new Test1Prepod());
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            MW.FrameBody.NavigationService.Navigate(new Test2Prepod());
+            ClassFrame.FrameBody.Navigate(new Test2Prepod());
+        }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            ClassFrame.FrameBody.Navigate(new RussiaN());
+        }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            ClassFrame.FrameBody.Navigate(new Orfo());
+        }
+
+        private void Button_Click_5(object sender, RoutedEventArgs e)
+        {
+            ClassFrame.FrameBody.Navigate(new Leks());
         }
     }
 }

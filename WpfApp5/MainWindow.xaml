@@ -1,0 +1,25 @@
+﻿<Window x:Class="WpfApp5.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp5"
+        mc:Ignorable="d"
+        Title="Электронное пособие по русскому языку" Height="768" Width="1440">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Frame x:Name="FrameLogo" Grid.RowSpan="1" Background="Blue" NavigationUIVisibility="Hidden"/>
+        <Frame x:Name="FrameMenu" Grid.Row="1" Grid.RowSpan="2"  Background="Blue" NavigationUIVisibility="Hidden"/>
+        <Frame x:FieldModifier="public" x:Name="FrameBody" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="3" NavigationUIVisibility="Hidden"/>
+    </Grid>
+</Window>

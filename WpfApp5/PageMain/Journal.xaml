@@ -1,0 +1,38 @@
+﻿<Page x:Class="WpfApp5.PageMain.Journal"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp5.PageMain"
+      mc:Ignorable="d" 
+      d:DesignHeight="1000" d:DesignWidth="1000"
+      Title="Journal">
+
+    <Grid>
+        <StackPanel Orientation="Vertical"  Width="550" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <TextBlock x:Name="TextBlockname"  HorizontalAlignment="left" Margin="0,10,10,10" Text="Название группы:" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
+                <ComboBox x:Name="CmdNamegroup2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10" Width="120" Height="24" FontSize="14"/>
+                <Button x:Name="BtnSearch" Content="Поиск" HorizontalAlignment="left" VerticalAlignment="Top" Margin="10" Height="24" Width="100" FontSize="14" Style="{StaticResource ButtonStyle}" Click="BtnSearh_Click"/>
+            </StackPanel>
+            
+            
+            
+            <DataGrid x:Name="DataGridlist1" CanUserAddRows="false" Margin="0,0,0,10" CanUserDeleteRows="false" CanUserResizeRows="False"
+                      AutoGenerateColumns="False" HorizontalAlignment="Left" Height="550" VerticalAlignment="Top" Width="540" FontSize="14">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Width="280" FontSize="14" Header="Фамилия" Binding="{Binding Student.Name}"/>
+                    <DataGridTextColumn Width="180" FontSize="14" Header="Номер теста" Binding="{Binding Test}"/>
+                    <DataGridTextColumn Width="*" FontSize="14" Header="Оценка" Binding="{Binding Evalution}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            
+            
+            
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" >
+                <Button Content="Печать" Height="24" Width="100" FontSize="14" Style="{StaticResource ButtonStyle}"/>
+                
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>

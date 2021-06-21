@@ -1,0 +1,83 @@
+﻿<Page x:Class="WpfApp5.PageMain.Test1Prepod"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp5.PageMain"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Test1Prepod">
+
+    <Grid>
+        <ScrollViewer>
+            <StackPanel Margin="10">
+
+                <StackPanel>
+                    <TextBlock FontSize="18" FontWeight="Bold">
+                        1. Укажите грамматически правильное продолжение предложения <LineBreak/> Подняв занавеску,
+                    </TextBlock>
+                    <RadioButton x:Name="R1"  Content="солнце заглянуло в окно." FontSize="18" Padding="5,-1,0,0" VerticalContentAlignment="Center" Margin="0,10,0,0"/>
+                    <RadioButton x:Name="R2" Content="я открыл окно." FontSize="18" Padding="5,-1,0,0" VerticalContentAlignment="Center" Margin="0,10,0,0"/>
+                    <RadioButton x:Name="R3" Content="в саду уже было светло." FontSize="18" Padding="5,-1,0,0" VerticalContentAlignment="Center" Margin="0,10,0,0"/>
+                    <RadioButton x:Name="R4" Content="она оказалась тяжелой." FontSize="18" Padding="5,-1,0,0" VerticalContentAlignment="Center" Margin="0,10,0,0"/>
+                    <Button x:Name="B1" Content="Принять" Width="100" Height="24" FontSize="14" HorizontalAlignment="Left" Margin="10" Style="{StaticResource ButtonStyle}" Click="Button_Click"/>
+                </StackPanel>
+
+
+
+                <StackPanel Margin="0,-5,0,0">
+                    <TextBlock FontSize="18" FontWeight="Bold" Margin="0,10,0,0">
+                        2. В каком предложении знаки препинания расставлены неправильно?
+                    </TextBlock>
+                    <RadioButton x:Name="R5"  Content="Однако прошлогоднего цветка здесь уже не было." FontSize="18" Padding="5,-1,0,0" VerticalContentAlignment="Center" Margin="0,10,0,0"/>
+                    <RadioButton x:Name="R6" Content="'По какому это случаю тут' - спрашивал Очумелов, врезываясь в толпу." FontSize="18" Padding="5,-1,0,0" VerticalContentAlignment="Center" Margin="0,10,0,0"/>
+                    <RadioButton x:Name="R7" Content="Они трудились не покладая рук." FontSize="18" Padding="5,-1,0,0" VerticalContentAlignment="Center" Margin="0,10,0,0"/>
+                    <RadioButton x:Name="R8" Content="Ты, Хрюкин пострадал и дела этого так не оставляй." FontSize="18" Padding="5,-1,0,0" VerticalContentAlignment="Center" Margin="0,10,0,0"/>
+                    <Button x:Name="B2" Content="Принять" Width="100" Height="24" FontSize="14" HorizontalAlignment="Left" Margin="10" Style="{StaticResource ButtonStyle}" Click="Button_Click_1"/>
+                </StackPanel>
+
+
+
+                <StackPanel Margin="0,-5,0,0">
+                    <TextBlock FontSize="18" FontWeight="Bold" Margin="0,10,0,0">
+                        3. В каком предложении нужно поставить только одну запятую? <LineBreak/> (Знаки препинания не расставлены)
+                    </TextBlock>
+                    <RadioButton x:Name="R9"  Content="Гоголь написал 'Ревизора' позднее в 1846 году." FontSize="18" Padding="5,-1,0,0" VerticalContentAlignment="Center" Margin="0,10,0,0"/>
+                    <RadioButton x:Name="R10" Content="Там она (собака) зализывала ушибы и раны и в одиночестве копила страх и злобу." FontSize="18" Padding="5,-1,0,0" VerticalContentAlignment="Center" Margin="0,10,0,0"/>
+                    <RadioButton x:Name="R11" Content="Цветок однако не хотел жить печально." FontSize="18" Padding="5,-1,0,0" VerticalContentAlignment="Center" Margin="0,10,0,0"/>
+                    <RadioButton x:Name="R12" Content="Ах встаньте встаньте здесь пол совсем нечист." FontSize="18" Padding="5,-1,0,0" VerticalContentAlignment="Center" Margin="0,10,0,0"/>
+                    <Button x:Name="B3" Content="Принять" Width="100" Height="24" FontSize="14" HorizontalAlignment="Left" Margin="10" Style="{StaticResource ButtonStyle}" Click="Button_Click_2"/>
+                </StackPanel>
+
+
+
+                <StackPanel Margin="0,-5,0,0">
+                    <TextBlock FontSize="18" FontWeight="Bold" Margin="0,10,0,0">
+                        4. В каком предложении знаки препинания расставлены неправильно?
+                    </TextBlock>
+                    <RadioButton x:Name="R13"  Content="А. Фет известен, как переводчик Гете, Гейне и многих поэтов." FontSize="18" Padding="5,-1,0,0" VerticalContentAlignment="Center" Margin="0,10,0,0"/>
+                    <RadioButton x:Name="R14" Content="Я оглянулся и увидел Савельича, сбегающего ко мне по нагорной тропинке." FontSize="18" Padding="5,-1,0,0" VerticalContentAlignment="Center" Margin="0,10,0,0"/>
+                    <RadioButton x:Name="R15" Content="Хозяин, родом яицкий казак, казался мужик лет шестидесяти, еще свежий и бодрый." FontSize="18" Padding="5,-1,0,0" VerticalContentAlignment="Center" Margin="0,10,0,0"/>
+                    <RadioButton x:Name="R16" Content="Мой грустный товарищ, махая крылом, кровавую пищу клюет под окном." FontSize="18" Padding="5,-1,0,0" VerticalContentAlignment="Center" Margin="0,10,0,0"/>
+                    <Button x:Name="B4" Content="Принять" Width="100" Height="24" FontSize="14" HorizontalAlignment="Left" Margin="10" Style="{StaticResource ButtonStyle}" Click="Button_Click_3"/>
+                </StackPanel>
+
+
+
+                <StackPanel Margin="0,-5,0,0">
+                    <TextBlock FontSize="18" FontWeight="Bold" Margin="0,10,0,0">
+                        5. В каком предложении на месте пропуска надо поставить тире?
+                    </TextBlock>
+                    <RadioButton x:Name="R17"  Content="'Левша'.. сказ о том, как тульские мастера аглицкую блоху подковали." FontSize="18" Padding="5,-1,0,0" VerticalContentAlignment="Center" Margin="0,10,0,0"/>
+                    <RadioButton x:Name="R18" Content="Мудрено и трудно .. жить просто." FontSize="18" Padding="5,-1,0,0" VerticalContentAlignment="Center" Margin="0,10,0,0"/>
+                    <RadioButton x:Name="R19" Content="Время.. лечит от страдания." FontSize="18" Padding="5,-1,0,0" VerticalContentAlignment="Center" Margin="0,10,0,0"/>
+                    <RadioButton x:Name="R20" Content="Совы.., известно, птицы осторожные." FontSize="18" Padding="5,-1,0,0" VerticalContentAlignment="Center" Margin="0,10,0,0"/>
+                    <Button x:Name="B5" Content="Принять" Width="100" Height="24" FontSize="14" HorizontalAlignment="Left" Margin="10" Style="{StaticResource ButtonStyle}" Click="Button_Click_4"/>
+                </StackPanel>
+
+                <Button  Content="Получить результат" Width="200" Height="24" FontSize="14" HorizontalAlignment="Center" Margin="10" Style="{StaticResource ButtonStyle}" VerticalAlignment="Center" Click="Button_Click_5"/>
+
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>

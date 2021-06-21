@@ -23,14 +23,14 @@
                 <DataGrid.Columns>
                     <DataGridTextColumn Width="280" FontSize="14" Header="Фамилия" Binding="{Binding Student.Name}"/>
                     <DataGridTextColumn Width="180" FontSize="14" Header="Номер теста" Binding="{Binding Test}"/>
-                    <DataGridTextColumn Width="*" FontSize="14" Header="Оценка" Binding="{Binding Evalution}"/>
+                    <DataGridTextColumn Width="*" FontSize="14" Header="Оценка" Binding="{Binding Evaluation}"/>
                 </DataGrid.Columns>
             </DataGrid>
             
             
             
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" >
-                <Button Content="Печать" Height="24" Width="100" FontSize="14" Style="{StaticResource ButtonStyle}"/>
+                <Button Content="Печать" Height="24" Width="100" FontSize="14" Style="{StaticResource ButtonStyle}" Click="Button_Click"/>
                 
             </StackPanel>
         </StackPanel>

@@ -12,6 +12,24 @@
         <ScrollViewer>
             <StackPanel Margin="10">
 
+                <StackPanel Orientation="Horizontal" Margin="10" >
+                    <TextBlock Width="230" Text="Выберите группу" FontSize="24"/>
+                    <ComboBox x:Name="CmbGr1" Width="210" Height="30" VerticalAlignment="Center" SelectionChanged="CmbGr1_SelectionChanged"  />
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" Margin="10">
+                    <TextBlock Width="230" Text="Выберите студента" FontSize="24"/>
+                    <ComboBox x:Name="CmbSt1"  Width="210" Height="30"  VerticalAlignment="Center"/>
+                </StackPanel>
+
+
+
+
+
+
+
+
+
                 <StackPanel>
                     <TextBlock FontSize="18" FontWeight="Bold">
                         1. Укажите грамматически правильное продолжение предложения <LineBreak/> Подняв занавеску,
@@ -76,8 +94,7 @@
                 </StackPanel>
 
                 <Button  Content="Получить результат" Width="200" Height="24" FontSize="14" HorizontalAlignment="Center" Margin="10" Style="{StaticResource ButtonStyle}" VerticalAlignment="Center" Click="Button_Click_5"/>
-                <ComboBox x:Name="CmbSt1" />
-                <ComboBox x:Name="CmbGr1" />
+                
             </StackPanel>
         </ScrollViewer>
     </Grid>

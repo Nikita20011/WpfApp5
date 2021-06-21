@@ -17,8 +17,8 @@ namespace WpfApp5
         public int ID { get; set; }
         public int ID_students { get; set; }
         public int Evaluation { get; set; }
-        public int Test { get; set; }
         public int ID_group { get; set; }
+        public int Test { get; set; }
     
         public virtual Group Group { get; set; }
         public virtual Student Student { get; set; }

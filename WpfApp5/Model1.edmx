@@ -19,8 +19,8 @@
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="ID_students" Type="int" Nullable="false" />
           <Property Name="Evaluation" Type="int" Nullable="false" />
-          <Property Name="Test" Type="int" Nullable="false" />
           <Property Name="ID_group" Type="int" Nullable="false" />
+          <Property Name="Test" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="Student">
           <Key>
@@ -125,8 +125,8 @@
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="ID_students" Type="Int32" Nullable="false" />
           <Property Name="Evaluation" Type="Int32" Nullable="false" />
-          <Property Name="Test" Type="Int32" Nullable="false" />
           <Property Name="ID_group" Type="Int32" Nullable="false" />
+          <Property Name="Test" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Group" Relationship="Self.FK_Journal_Group" FromRole="Journal" ToRole="Group" />
           <NavigationProperty Name="Student" Relationship="Self.FK_Journal_Student1" FromRole="Journal" ToRole="Student" />
         </EntityType>
@@ -234,8 +234,8 @@
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="ID_students" ColumnName="ID_students" />
                 <ScalarProperty Name="Evaluation" ColumnName="Evaluation" />
-                <ScalarProperty Name="Test" ColumnName="Test" />
                 <ScalarProperty Name="ID_group" ColumnName="ID_group" />
+                <ScalarProperty Name="Test" ColumnName="Test" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

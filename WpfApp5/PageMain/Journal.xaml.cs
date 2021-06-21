@@ -27,8 +27,8 @@ namespace WpfApp5.PageMain
     /// </summary>
     public partial class Journal : Page
     {
-        internal int Evalution;
-
+        
+        
         public Journal()
         {
             InitializeComponent();
@@ -69,6 +69,13 @@ namespace WpfApp5.PageMain
         private void BtnSearch_SourceUpdated(object sender, DataTransferEventArgs e)
         {
 
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            PrintDialog printDialog = new PrintDialog();
+            if (printDialog.ShowDialog() == true)
+                printDialog.PrintVisual(DataGridlist1, "Список оценок");
         }
     }
 }

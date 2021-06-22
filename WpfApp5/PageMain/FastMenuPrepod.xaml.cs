@@ -79,5 +79,11 @@ namespace WpfApp5.PageMain
         {
             ClassFrame.FrameBody.Navigate(new Treb());
         }
+
+        private void Button_Click_10(object sender, RoutedEventArgs e)
+        {
+            ClassFrame.FrameBody.Navigate(new Body());
+            ClassFrame.FrameMenu.Navigate(new Clear());
+        }
     }
 }

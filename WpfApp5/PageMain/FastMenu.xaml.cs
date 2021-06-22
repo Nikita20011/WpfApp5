@@ -49,6 +49,7 @@ namespace WpfApp5.PageMain
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
             MW.FrameBody.NavigationService.Navigate(new Body());
+            ClassFrame.FrameMenu.Navigate(new Clear());
         }
 
         private void Button_Click_4(object sender, RoutedEventArgs e)

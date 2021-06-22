@@ -26,7 +26,7 @@
             
             <Label Content="ЖУРНАЛ" FontWeight="Bold" FontSize="14" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             <Button Content="Оценки" FontSize="14" Style="{StaticResource ButtonStyle}" Height="24" Width="225" Margin="0,5" Click="Button_Click"/>
-            <Button Content="Выход" FontSize="14" Style="{StaticResource ButtonStyle}" Height="24" Width="225" Margin="0,5"/>
+            <Button Content="Выход" FontSize="14" Style="{StaticResource ButtonStyle}" Height="24" Width="225" Margin="0,5" Click="Button_Click_10"/>
         </StackPanel>
     </Grid>
 </Page>

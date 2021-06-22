@@ -159,14 +159,14 @@ namespace WpfApp5.PageMain
 
             Journal journal1 = new Journal()
             {
-                Evaluation = c,
-                Student = CmbSt1.SelectedItem as Student,
-                Group = CmbGr1.SelectedItem as Group,
-                Test = 1,
+                //Evaluation = c,
+                //Student = CmbSt1.SelectedItem as Student,
+                //Group = CmbGr1.SelectedItem as Group,
+                //Test = 1,
 
             };
 
-            ClassConnect.Ent.Journals.Add(journal);
+            //ClassConnect.Ent.Journals.Add(journal);
             ClassConnect.Ent.SaveChanges();
             MessageBox.Show("Оценка добавлена");
             MW.FrameBody.NavigationService.Navigate(new Enterbody());

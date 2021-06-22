@@ -12,15 +12,16 @@
         <StackPanel Orientation="Vertical" VerticalAlignment="Top" HorizontalAlignment="Center" >
             <Label Content="СОДЕРЖАНИЕ" FontWeight="Bold" FontSize="14" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             <Button Content="Основные требования к речи" FontSize="14" Style="{StaticResource ButtonStyle}" Height="24" Width="225" Margin="0,5" Click="Button_Click_2" />
-            <Button Content="Орфоэпические нормы" FontSize="14" Style="{StaticResource ButtonStyle}" Height="24" Width="225" Margin="0,5"/>
-            <Button Content="Словообразовательные нормы" FontSize="14" Style="{StaticResource ButtonStyle}" Height="24" Width="225" Margin="0,5"/>
-            <Button Content="Лексические нормы" FontSize="14" Style="{StaticResource ButtonStyle}" Height="24" Width="225" Margin="0,5"/>
-            <Button Content="Морфологические нормы" FontSize="14" Style="{StaticResource ButtonStyle}" Height="24" Width="225" Margin="0,5"/>
-            <Button Content="Синтаксические нормы" FontSize="14" Style="{StaticResource ButtonStyle}" Height="24" Width="225" Margin="0,5"/>
-            <Button Content="Основные требования к речи" FontSize="14" Style="{StaticResource ButtonStyle}" Height="24" Width="225" Margin="0,5"/>
+            <Button Content="Орфоэпические нормы" FontSize="14" Style="{StaticResource ButtonStyle}" Height="24" Width="225" Margin="0,5" Click="Button_Click_4"/>
+            <Button Content="Словообразовательные нормы" FontSize="14" Style="{StaticResource ButtonStyle}" Height="24" Width="225" Margin="0,5" Click="Button_Click_5"/>
+            <Button Content="Лексические нормы" FontSize="14" Style="{StaticResource ButtonStyle}" Height="24" Width="225" Margin="0,5" Click="Button_Click_6"/>
+            <Button Content="Морфологические нормы" FontSize="14" Style="{StaticResource ButtonStyle}" Height="24" Width="225" Margin="0,5" Click="Button_Click_7"/>
+            <Button Content="Синтаксические нормы" FontSize="14" Style="{StaticResource ButtonStyle}" Height="24" Width="225" Margin="0,5" Click="Button_Click_8"/>
+            <Button Content="Основные требования к речи" FontSize="14" Style="{StaticResource ButtonStyle}" Height="24" Width="225" Margin="0,5" Click="Button_Click_9"/>
             <Label Content="ТЕСТЫ" FontWeight="Bold" FontSize="14" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             <Button Content="Тест №1" FontSize="14" Style="{StaticResource ButtonStyle}" Height="24" Width="225" Margin="0,5" Click="Button_Click" />
             <Button Content="Тест №2" FontSize="14" Style="{StaticResource ButtonStyle}" Height="24" Width="225" Margin="0,5" Click="Button_Click_1"/>
+            <Button Content="Выход" FontSize="14" Style="{StaticResource ButtonStyle}" Height="24" Width="225" Margin="0,5" Click="Button_Click_3" />
         </StackPanel>
     </Grid>
 </Page>

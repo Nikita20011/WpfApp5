@@ -59,5 +59,25 @@ namespace WpfApp5.PageMain
         {
             ClassFrame.FrameBody.Navigate(new Leks());
         }
+
+        private void Button_Click_6(object sender, RoutedEventArgs e)
+        {
+            ClassFrame.FrameBody.Navigate(new Slovo());
+        }
+
+        private void Button_Click_7(object sender, RoutedEventArgs e)
+        {
+            ClassFrame.FrameBody.Navigate(new Morf());
+        }
+
+        private void Button_Click_8(object sender, RoutedEventArgs e)
+        {
+            ClassFrame.FrameBody.Navigate(new Sink());
+        }
+
+        private void Button_Click_9(object sender, RoutedEventArgs e)
+        {
+            ClassFrame.FrameBody.Navigate(new Treb());
+        }
     }
 }

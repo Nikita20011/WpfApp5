@@ -97,8 +97,14 @@
     <Compile Include="PageMain\RussiaN.xaml.cs">
       <DependentUpon>RussiaN.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PageMain\Sink.xaml.cs">
+      <DependentUpon>Sink.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PageMain\Slovo.xaml.cs">
       <DependentUpon>Slovo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageMain\Treb.xaml.cs">
+      <DependentUpon>Treb.xaml</DependentUpon>
     </Compile>
     <Compile Include="Student.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -167,6 +173,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="PageMain\Sink.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="PageMain\Slovo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -184,6 +194,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="PageMain\Test2Prepod.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageMain\Treb.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

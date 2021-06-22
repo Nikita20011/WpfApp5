@@ -45,5 +45,40 @@ namespace WpfApp5.PageMain
         {
             MW.FrameBody.NavigationService.Navigate(new RussiaN());
         }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            MW.FrameBody.NavigationService.Navigate(new Body());
+        }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            MW.FrameBody.NavigationService.Navigate(new Orfo());
+        }
+
+        private void Button_Click_5(object sender, RoutedEventArgs e)
+        {
+            MW.FrameBody.NavigationService.Navigate(new Slovo());
+        }
+
+        private void Button_Click_6(object sender, RoutedEventArgs e)
+        {
+            MW.FrameBody.NavigationService.Navigate(new Leks());
+        }
+
+        private void Button_Click_7(object sender, RoutedEventArgs e)
+        {
+            MW.FrameBody.NavigationService.Navigate(new Morf());
+        }
+
+        private void Button_Click_8(object sender, RoutedEventArgs e)
+        {
+            MW.FrameBody.NavigationService.Navigate(new Sink());
+        }
+
+        private void Button_Click_9(object sender, RoutedEventArgs e)
+        {
+            MW.FrameBody.NavigationService.Navigate(new Treb());
+        }
     }
 }
